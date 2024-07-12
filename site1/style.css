@@ -1,0 +1,99 @@
+/* Styles for my First Wordpress Website
+Name: First Theme
+Author: Cindy Le
+Date: July 2024
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: beige;
+}
+
+header {
+    background: yellow;
+}
+
+#top {
+    height: 60px;
+    background: orange;
+}
+
+#inner-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    background: tan;
+}
+/* this is our background image*/
+
+#hero {
+    height:400px;
+    background: red;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+main {
+    width:62%;
+    float: left;
+}
+
+footer {
+    background: #ccc;
+    height: 300px;
+    clear: both;
+}
+
+/* typography */
+
+p {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.meta span {
+    display:block;
+    font-style:italic;
+}
+
+/* comment form css */
+
+#commentform {
+    border: 1px solid tan;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+
+}
+
+.comment-notes {
+    font-size: 9em;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+label {
+    display: block;
+}
+.comment-form-cookies-consent label {
+    display: inline;
+}
+
+.comment-form p{
+    margin-bottom: 10px;
+}
+
+.commentlist {
+    margin: 10px 0 15px 30px;
+}
