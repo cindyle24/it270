@@ -3,14 +3,21 @@ get_header();
 ?>
 <!--the index.php page is assigned to the blog page!!! blog container for all of our posts -->
 
-<div id="hero">
-<img src="<?php echo get_template_directory_uri(); ?>/images/yellowstone-inner.jpg" alt="Yellowstone">
-</div>
+
 
 <div id="wrapper">
+
+<!-- We will add a happy picture here!!! -->
 <main>
 <?php if(have_posts()) : ?>
 <!-- We need to show the posts by using a while loop in the world of PHP  -->
+<!-- We will add a happy picture here!!! -->
+<h2>Search Results For: <?php echo get_search_query()  ;?></h2>
+<!-- We will add how many posts or pages exist --> 
+<p>Our findings for
+<?php /* Search Count */
+$allsearch = new WP_Query("s=$s&showposts=-1"); $key = wp_specialchars($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' &mdash; '); echo $count . ' '; _e('articles/pages'); wp_reset_query(); ?></p>
+
 <?php while(have_posts()) : the_post() ;  ?>
 <article class="post">
 <h2 class="title">
@@ -44,7 +51,8 @@ get_header();
 <?php endwhile; ?>
 <?php else : ?>
 <h2>
-Search Results:
+No Content For:
+<?php echo get_search_query()  ;?>
 </h2>
 <p>Sorry, we could not find anything regarding your search terms. Would you like to search again, using different keywords?</p>
 <?php get_search_form(); ?>
@@ -52,7 +60,7 @@ Search Results:
 </main>
 
 <aside>
-    This is my index.php page!
+    This is my search.php page!
 </aside>
 
 </div>

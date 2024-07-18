@@ -2,7 +2,9 @@
 get_header();
 ?>
 <!--the index.php page is assigned to the blog page!!! blog container for all of our posts -->
-
+<div id="hero">
+<img src="<?php echo get_template_directory_uri(); ?>/images/yellowstone-inner.jpg" alt="Yellowstone">
+</div>
 
 
 <div id="wrapper">

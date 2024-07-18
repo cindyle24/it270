@@ -2,15 +2,24 @@
 get_header();
 /* Template Name: Front Page */
 ?>
+<div id="hero">
+<img src="<?php echo get_template_directory_uri(); ?>/images/yellowstone-header-home.jpg" alt="Yellowstone">
+</div>
+<!-- end hero -->
 <!--the index.php page is assigned to the blog page!!! blog container for all of our posts -->
+
+
 <div id="wrapper">
 
 <?php if(have_posts()) : ?>
 <!-- We need to show the posts by using a while loop in the world of PHP  -->
 <?php while(have_posts()) : the_post() ;  ?>
 <?php the_content() ; ?>
+
 <?php endwhile; ?>
+
 <?php else : ?>
+
 <h2>
 <?php echo wpautop('Sorry, no posts were found!');  
 ?>

@@ -12,15 +12,19 @@ Date: July 2024
 
 body {
     background: beige;
+	font-size: 100%;
 }
+
 
 header {
     background: yellow;
+
 }
 
 #top {
-    height: 60px;
+    padding: 10px 30px 10px 10px;
     background: orange;
+	overflow: hidden;
 }
 
 #inner-header {
@@ -28,17 +32,58 @@ header {
     margin: 0 auto;
     height: 100px;
     background: tan;
+	padding: 10px 20px 10px 0;
+	clear: both;
+
 }
 /* this is our background image*/
 
 #hero {
-    height:400px;
     background: red;
 }
+.home #hero {
+    background-image: url(https://cindyble.com/it270/site1/wp-content/uploads/yellowstone-header-home.jpg);
+
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: 0 100px;
+    min-height:550px;
+    max-width:100%;
+    background-repeat: no-repeat;
+}
+
+.inner-page #hero {
+	background-image: url(https://cindyble.com/it270/site1/wp-content/uploads/yellowstone-inner.jpg);
+
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: 0 100px;
+    min-height:350px;
+    max-width:100%;
+    background-repeat: no-repeat;
+}
+#hero img {
+    display:none;
+}
+
+header {
+	background: yellow;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
 
 #wrapper {
     max-width: 1200px;
     margin: 20px auto;
+}
+
+.error404 #wrapper,
+.search #wrapper{
+    margin:140px auto 0 auto;
+
 }
 
 main {
@@ -63,20 +108,117 @@ footer {
     display: none;
 }
 
+#site-navigation {
+	float: right;
+}
+
+#site-navigation li {
+	float: left;
+	list-style-type: none;
+	margin-left: 15px;
+	position: relative;
+} 
+
+
+
+#site-navigation li a {
+	text-decoration: none;
+	padding-bottom: 5px;
+
+}
+
+.sub-menu {
+	display: none;
+}
+
+#site-navigation li:hover .sub-menu {
+	display: block;
+	position: absolute;
+	background: #fff;
+	padding: 5px;
+	top: 24px;
+	width: 180px;
+}
+
+#site-navigation li:hover .sub-menu li {
+	margin-left: 0;
+	float:none;
+}
+
+/* classes and ids */
+
+.thumbnail {
+	margin-bottom: 15px;
+}
+
+.not-thumbnail img {
+	width: 500px;
+	height: 100%;
+	margin-bottom: 15px;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+#top #searchform{
+	float: right;
+}
+
+.post, .posts {
+	margin-bottom: 25px;
+}
+
+.meta {
+	margin-bottom: 10px;
+}
+
+.block {
+	display: block;
+	font-style: italic;
+}
+
+.search .pagetitle {
+	margin-bottom: 10px;
+}
+
+.searching-box {
+	width: 62%;
+	float: left;
+}
+
+img {
+	max-width: 100%;
+}
 
 /* typography */
 
 p {
     margin-bottom: 20px;
+	line-height: 1.4;
+}
+
+p + .block {
+	margin:-10px 0 10px 0;
 }
 
 .title {
-    font-size: 2em;
+	font-size: 2em;
+	margin-bottom: 10px;
 }
 
 .meta span {
-    display:block;
-    font-style:italic;
+	display: block;
+	font-style: italic;
+}
+
+h1, h2, h3 {
+	font-family: playfair, serif;
+	color: brown;
+}
+
+a {
+	color: brown;
 }
 
 /* comment form css */
@@ -98,6 +240,7 @@ p {
 label {
     display: block;
 }
+
 .comment-form-cookies-consent label {
     display: inline;
 }
@@ -110,8 +253,27 @@ label {
     margin: 10px 0 15px 30px;
 }
 
-
 /* the beginning of our media queries */
+
+@media screen and (max-width:1450px){
+
+.home #hero {
+        background-image: none;
+        margin-top:100px;
+        min-height:auto;
+    }
+
+.inner-page #hero {
+        background-image: none;
+        margin-top:100px;
+        min-height:auto;
+    }
+
+#hero img{
+        display:block;
+    }
+    
+}
 
 
 
@@ -127,7 +289,7 @@ label {
 		left: 7px;
 		width: 50px;
 		height: 35px;
-		background: url('/images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background: url('images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 21px, 100%;
@@ -143,7 +305,7 @@ label {
 		background-color: rgba(0,0,0,.1);
 	}
 	.nav-button.open {
-		background: url('/images/close-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background: url('images/close-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: 21px, 100%;
@@ -157,7 +319,7 @@ label {
 	.primary-nav {
 		width: 100%;
 		float: none;
-		background-color: #238be3; /* change the menu color */
+		background-color: brown; /* change the menu color */
 		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		display: block;
 		height: 50px;
@@ -176,9 +338,26 @@ label {
 		width: 100%;
 		font-family: Arial;
 	}
+
+/* my navigation styles */
+
+	#site-navigation li {
+		float: none;
+		margin-left: 0;
+	}
+
+	#site-navigation li:hover .sub-menu {
+		position: static;
+		background: none;
+		padding: 0;
+		width:auto;
+	}
+
+/* end my navigation styles */
+
 	.primary-nav li a {
 		display: block;
-		width: 90%;
+		width: 100%;
 		padding: 10px 5%;
 		font-size: 14px;
 		font-weight: bold;
