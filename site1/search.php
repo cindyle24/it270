@@ -59,9 +59,8 @@ No Content For:
 <?php endif; ?>
 </main>
 
-<aside>
-    This is my search.php page!
-</aside>
+<?php get_sidebar(); ?>
+
 
 </div>
 <!-- close wrapper -->

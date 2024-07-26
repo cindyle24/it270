@@ -51,9 +51,7 @@ Search Results:
 <?php endif; ?>
 </main>
 
-<aside>
-    This is my index.php page!
-</aside>
+<?php get_sidebar(); ?>
 
 </div>
 <!-- close wrapper -->

@@ -6,50 +6,34 @@ Date: July 2024
 
 * {
     padding: 0;
-    margin: 0;
+    margin: 0; 
     box-sizing: border-box;
 }
 
 body {
-    background: beige;
+    background: #fff;
+	font-family: Verdana, Geneva, Tahoma, sans-serif; 
 	font-size: 100%;
 }
 
-
-header {
-    background: yellow;
-
-}
-
-#top {
-    padding: 10px 30px 10px 10px;
-    background: orange;
-	overflow: hidden;
-}
-
-#inner-header {
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100px;
-    background: tan;
-	padding: 10px 20px 10px 0;
-	clear: both;
-
-}
-/* this is our background image*/
-
 #hero {
-    background: red;
+    background: #fff;
 }
+
 .home #hero {
     background-image: url(https://cindyble.com/it270/site1/wp-content/uploads/yellowstone-header-home.jpg);
 
     background-attachment: fixed;
     background-size: 100%;
-    background-position: 0 100px;
+    background-position: 0 110px;
     min-height:550px;
     max-width:100%;
     background-repeat: no-repeat;
+}
+
+#hero img {
+    display:none;
+	max-width: 100%;
 }
 
 .inner-page #hero {
@@ -57,28 +41,115 @@ header {
 
     background-attachment: fixed;
     background-size: 100%;
-    background-position: 0 100px;
-    min-height:350px;
+    background-position: 0 110px;
+    min-height:370px;
     max-width:100%;
     background-repeat: no-repeat;
 }
-#hero img {
-    display:none;
-}
 
 header {
-	background: yellow;
+    background: #fff;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	/*added padding bottom */
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #888;
 }
 
+#top {
+    padding: 10px 30px 10px 10px;
+    background: #a69851;
+	overflow: hidden;
+}
+
+#inner-header {
+    max-width: 1200px;
+    margin: 0 auto;
+	padding: 10px 20px 10px 0;
+	clear: both;
+
+}
+
+.inner-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+	padding: 10px 0;
+	clear: both;
+	text-align: center;
+}
+
+.inner-footer .third {
+	text-align: center;
+}
+
+.inner-footer ul {
+	height: 60px;
+	line-height: 60px;
+	font-size: .875em;
+	color: #999;
+	list-style-type: none;
+}
+.inner-footer a{
+	color: #999;
+}
+
+.inner-footer li {
+	float: left;
+	margin-right: 25px;
+}
+
+.inner-specials {
+	margin-top: 20px;
+	background: orange;
+	padding: 3%;
+}
+
+.inner-buy {
+	clear: both;
+	background: #ddd;
+}
+
+.row {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.third {
+	width: 31.91%;
+	float: left;
+	margin-right: 2.12%;
+	padding: 0 1%;
+
+}
+#wrapper .third {
+	padding: 0;
+}
+
+
+.third:last-of-type {
+	margin-right: 0;
+}
+
+.col8 {
+	float: left;
+	width: 48.93%;
+
+}
+.col8:last-of-type {
+	float: right;
+}
+
+
+
+/* this is our background image*/
 
 #wrapper {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto 40px auto;
 }
+
 
 .error404 #wrapper,
 .search #wrapper{
@@ -94,13 +165,11 @@ main {
 aside {
     float: right;
     width: 35%;
-    height: 400px;
-    background: #ddd;
-
 }
+
 footer {
-    background: #ccc;
-    height: 300px;
+    background: #eee;
+	padding-top: 20px;
     clear: both;
 }
 
@@ -134,7 +203,7 @@ footer {
 #site-navigation li:hover .sub-menu {
 	display: block;
 	position: absolute;
-	background: #fff;
+	background: #eee;
 	padding: 5px;
 	top: 24px;
 	width: 180px;
@@ -143,6 +212,7 @@ footer {
 #site-navigation li:hover .sub-menu li {
 	margin-left: 0;
 	float:none;
+	line-height: 1.4;
 }
 
 /* classes and ids */
@@ -189,9 +259,73 @@ footer {
 
 img {
 	max-width: 100%;
+	height: auto;
 }
 
+main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+
+
 /* typography */
+
+/* in our aside, add a background color to headline 3 */
+
+.home h1 {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 14px;
+
+}
+.third span a {
+	display: block;
+	color: brown;
+	font-style: italic;
+	margin-top: 5px;
+	font-size: 1.1em;
+}
+
+.row p {
+	font-size: .92em;
+}
+
+.third h3,
+.col8 h3 {
+	font-size: 1.8em;
+	margin-bottom: 10px;
+	color: #f28d35;
+}
+
+.inner-widget h3 {
+	background: #f28d35;
+	font-size: 1.4em;
+	padding: 3%;
+	color: #fff;
+	margin-bottom: 10px;
+}
+.inner-tours h3 {
+	font-size: 1.4em;
+	color: #f28d35;
+}
+
+.inner-tours {
+	background: #eee;
+	padding: 3%;
+
+}
+aside ul {
+	margin-left: 5%;
+	margin-bottom: 12px;
+	list-style-type: none;
+}
+
+footer h2{
+	text-align: center;
+	font-size: 2.4em;
+	margin-bottom: 11px;
+}
 
 p {
     margin-bottom: 20px;
@@ -219,6 +353,13 @@ h1, h2, h3 {
 
 a {
 	color: brown;
+}
+h2 {
+	margin-bottom: 10px;
+}
+.home h2 {
+	text-align: center;
+	font-size: 2.4em;
 }
 
 /* comment form css */
@@ -256,6 +397,16 @@ label {
 /* the beginning of our media queries */
 
 @media screen and (max-width:1450px){
+
+	#inner-header {
+		padding: 10px 25px 10px 25px;	
+	}
+	
+	#wrapper {
+		max-width: 1200px;
+		margin: 25px;
+	}
+	
 
 .home #hero {
         background-image: none;

@@ -36,8 +36,14 @@ get_header();
 </h2>
 <?php endif; ?>
 <?php comments_template();?>
+
+<span class="next-previous">
+<?php (previous_post_link()) ? '%link' : ''; ?> &nbsp; &nbsp; <?php (next_post_link()) ? '%link' : ''; ?>
+</span>
+
 </main>
 
+<?php get_sidebar(); ?>
 
 </div>
 <!-- close wrapper -->
