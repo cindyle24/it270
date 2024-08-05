@@ -33,7 +33,6 @@ body {
 
 #hero img {
     display:none;
-	max-width: 100%;
 }
 
 .inner-page #hero {
@@ -91,7 +90,7 @@ header {
 	color: #999;
 	list-style-type: none;
 }
-.inner-footer a{
+.inner-footer a {
 	color: #999;
 }
 
@@ -102,7 +101,7 @@ header {
 
 .inner-specials {
 	margin-top: 20px;
-	background: orange;
+	background: #fff;
 	padding: 3%;
 }
 
@@ -110,6 +109,12 @@ header {
 	clear: both;
 	background: #ddd;
 }
+
+.inner-buy h2 { 
+	color: #f28d35;
+	text-align: center;
+}
+
 
 .row {
 	overflow: hidden;
@@ -268,10 +273,23 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 	margin-bottom: 15px;
 }
 
+.blog main
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.category main
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.search main
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.archive main
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image{
+	width: auto;
+	height: auto;
+	margin-bottom: 0px;
+}
+main ul {
+	margin-bottom: 10px;
+}
 
 /* typography */
-
-/* in our aside, add a background color to headline 3 */
 
 .home h1 {
 	font-size: 3em;
@@ -279,12 +297,31 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 	margin-bottom: 14px;
 
 }
+
 .third span a {
 	display: block;
 	color: brown;
 	font-style: italic;
 	margin-top: 5px;
 	font-size: 1.1em;
+}
+.home blockquote + p {
+	font-size: 1.3em;
+	margin: 0 4% 20px 4%;
+}
+
+.home blockquote + p::first-line{
+	color:#73653c;
+	font-weight: bold;
+}
+
+.home blockquote + p + p {
+	font-size: 1.3em;
+	margin: 0 4% 40px 4%;
+}
+
+.wp-block-quote{
+	text-align: center;
 }
 
 .row p {
@@ -305,6 +342,7 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 	color: #fff;
 	margin-bottom: 10px;
 }
+
 .inner-tours h3 {
 	font-size: 1.4em;
 	color: #f28d35;
@@ -315,11 +353,40 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 	padding: 3%;
 
 }
+
+.inner-tours p {
+	margin-bottom: 0;
+}
+
 aside ul {
 	margin-left: 5%;
 	margin-bottom: 12px;
 	list-style-type: none;
 }
+
+aside li a {
+	color: #666;
+}
+
+
+.blog aside li,
+.category aside li,
+.search aside li,
+.archive aside li,
+.post-template-default aside li
+{
+	margin-bottom: 5px;
+}
+
+.blog aside ul,
+.category aside ul,
+.search aside ul,
+.archive aside ul,
+.post-template-default aside ul
+{
+	margin-bottom: 25px;
+}
+
 
 footer h2{
 	text-align: center;
@@ -351,9 +418,14 @@ h1, h2, h3 {
 	color: brown;
 }
 
+.contact h1 {
+	text-align: center;
+}
+
 a {
 	color: brown;
 }
+
 h2 {
 	margin-bottom: 10px;
 }
@@ -394,6 +466,38 @@ label {
     margin: 10px 0 15px 30px;
 }
 
+
+
+/* formidable forms CSS */
+
+.frm_form_title {
+	font-size: 1.8em !important;
+	background:none !important;
+	padding: 0 !important;
+	color: #a69851 !important;
+
+}
+
+.frm_button_submit{
+	background: #a69851 !important;
+	border-color: #a69851 !important;
+}
+
+.with_frm_style legend + h3, .with_frm_style h3.frm_form_title{
+	margin-bottom: 10px !important;
+}
+
+/*contact form*/
+
+.frm_fields_container{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.contact .frm_form_title{
+	text-align: center !important;
+}
+
 /* the beginning of our media queries */
 
 @media screen and (max-width:1450px){
@@ -426,7 +530,185 @@ label {
     
 }
 
+@media only screen and (max-width: 900px) {
+	body{
+		/*background: lightcyan; */
+	}
 
+	.third{
+		width: auto;
+		float: none;
+		margin-right: 0;
+		padding: 0 1%;
+		text-align: center;
+	}
+
+	.third img{
+		margin: 0 auto 15px auto;
+		display: block;
+	}
+
+	main{
+		width: 60%;
+	}
+
+	aside{
+		width: 37%;
+	}
+
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	/*++++ ADD ADDITIONAL STYLES++++*/
+
+	header{
+		padding-top: 33px;
+	}
+
+	#top{
+		/*background: #fff;*/
+	}
+	
+	body{
+		font-size: 93%;
+	}
+
+	.home #hero{
+		margin-top: 90px;
+	}
+
+	#logo {
+		margin:0 auto;
+		display: block;
+	}
+
+	.inner-page #hero img{
+		display: none;
+	}
+
+	main {
+		float: none;
+		width: auto;
+	}
+
+	aside {
+		float: none;
+		width: auto;
+	}
+
+	#wrapper {
+		margin: 13px;
+	}
+
+	.search #wrapper {
+		margin: 120px 13px 20px 13px;
+	}
+
+	.col8 {
+		float:none;
+		width: auto;
+		text-align: center;
+	}
+
+	.col8 :last-of-type{
+		float: none;
+	}
+
+	.col8 img{
+		margin-bottom: 15px;
+	}
+
+	#top #searchform{
+		float: none;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 1000;
+		height: 30px;
+	}
+
+	h1, h2, h3 {
+		line-height: 1.1;
+	}
+
+	.home h1{
+		font-size: 2.2em;
+	}
+
+	.home h2{
+		font-size: 1.8em;
+	}
+
+	h1{
+		font-size: 2.2em;
+	}
+
+	h2{
+		font-size: 1.8em;
+	}
+
+	h3{
+		font-size: 1.6em;
+	}
+
+	blockquote{
+		font-size: 1.4em;
+		margin: 0 3% 20px 3%;
+	}
+
+	.home blockquote + p{
+		font-size: 1.1em;
+		margin: 0 3% 20px 3%;
+	}
+
+	.home blockquote + p::first-line{
+		font-weight: normal;
+	}
+
+	.home blockquote + p + p {
+		font-size: 1.1em;
+		margin: 0 3% 40px 3%;
+	}
+
+	.wp-block-heading{
+		text-align: center;
+	}
+
+	.blog main,
+	.blog aside{
+		text-align: center;
+	}
+
+	.blog main,
+	.search main,
+	.archive main{
+		text-align: center;
+	}
+
+
+	.inner-footer ul{
+		height: auto;
+		line-height: inherit;
+	}
+	
+	.inner-footer a {
+		color: #999;
+	}
+	
+	.inner-footer li{
+		float: none;
+		margin-right: 0;
+		text-align: center;
+		line-height: 1.5;
+	}
+
+	.inner-footer ul{
+		text-align: center;
+	}
+
+}
 
 @media only screen and (max-width: 700px) {
 
@@ -470,7 +752,7 @@ label {
 	.primary-nav {
 		width: 100%;
 		float: none;
-		background-color: brown; /* change the menu color */
+		background-color: #73653c; /* change the menu color */
 		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
 		display: block;
 		height: 50px;
