@@ -1,0 +1,102 @@
+/*
+ Theme Name:   Blank Slate Child Theme
+ description: 
+   A child theme of the Blank Slate default WordPress theme
+ Author:       Cindy Le
+ Template:     blankslate
+ Version:      1.0.0
+*/
+
+body {
+    background: #ddd;
+}
+
+#header {
+  background: tan;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#logo {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+#wrapper {
+  max-width: 1200px;
+  margin: 100px 0 60px 220px;
+}
+
+#content {
+  width: 63%;
+  float: left;
+  background: beige;
+}
+
+#sidebar {
+  width: 34%;
+  float: right;
+}
+
+#footer {
+  clear:both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* +++++ typography +++++ */
+
+p {
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.home h1 {
+  font-size: 3em;
+}
+
+.website-2 h1 {
+  font-size: 2em;
+}
+
+h1 {
+  color: red;
+  font-size: 2em;
+}
+
+h3{
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+h3 + img {
+  margin: 10px 0 15px 0;
+
+}
+
+img + h1 {
+  margin: 12px 0 10px 0;
+}
+
+#sidebar p {
+  font-size: .9em;
+}
+
+.menu {
+    margin-left: 12px;
+}
+
+
+.menu li {
+  line-height: 1.25;
+}
+.menu li a {
+    text-decoration: none;
+}
